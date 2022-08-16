@@ -1,0 +1,60 @@
+/* SubList */
+
+.list-div {
+    width: 60%;
+
+    margin: 1rem auto;
+    padding: 1rem;
+  
+    background-color: darkgrey;
+    color: #282c34;
+}
+  
+  /* task */
+  .task-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .task-p-div {
+    width: 80%;
+    text-align: left;
+  }
+  
+  .task-div p {
+    margin: 0.5rem;
+  }
+  
+  /* #todo-list */
+  #todo-list .list-button {
+    background-color: rgb(35, 210, 35);
+    color: white;
+    border: none;
+  }
+  
+  #todo-list .list-button:hover {
+    background-color: #1caf1c;
+  }
+  
+  /* #done-list */
+  #done-list .list-button {
+    background-color: red;
+    color: white;
+    border: none;
+  }
+  
+  #done-list .list-button:hover {
+    background-color: #bf3b31;
+  }
+
+/* Media Queries */
+@media (min-width: 500px) {
+
+    .list-div {
+        width: 35%;
+
+        margin: 1rem auto;
+        padding: 1rem;
+    }
+}

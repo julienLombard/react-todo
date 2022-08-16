@@ -14,7 +14,6 @@
 }
 
 .App-main {
-  /* background-color: #282c34; */
   background: linear-gradient(#404145, #99d84e, #e1df78);
   min-height: 100vh;
   display: flex;
@@ -36,26 +35,4 @@
   to {
     transform: rotate(360deg);
   }
-}
-
-/* SubList */
-
-.list-div {
-  margin: 1rem;
-  padding: 1rem;
-
-  background-color: darkgrey;
-  color: #282c34;
-}
-
-.list-done-button {
-  background-color: rgb(35, 210, 35);
-  color: white;
-  border: none;
-}
-
-.list-delete-button{
-  background-color: red;
-  color: white;
-  border: none;
 }

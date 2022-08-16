@@ -5,7 +5,7 @@
   }
   
   .form-div form {
-    width: 50%;
+    width: 100%;
     margin: 0 auto;
   }
   
@@ -36,3 +36,12 @@
   .form-div form button:hover {
     background-color: #ec7d38;
   }
+
+
+/* Media Queries */
+@media (min-width: 500px) {
+
+  .form-div form {
+    width: 50%;
+  }
+}

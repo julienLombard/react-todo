@@ -1,7 +1,7 @@
 import React, { memo, useState } from 'react';
 import { deleteTask, setCompletedTask } from '../../store/actions';
 import { SearchTask } from '../SearchTask';
-import { SubList } from '../SubList';
+import { SubList } from '../subList/SubList';
 import './listSelector.css';
 
 export const ListSelector = memo(() => {
@@ -12,14 +12,20 @@ export const ListSelector = memo(() => {
   });
 
   const handleClickShowList = (e) => {
-    if (e.target.id === 'todo') {
-      setShowList({ todo: true, done: false, searchBar: false });
-    } else if (e.target.id === 'done') {
-      setShowList({ todo: false, done: true, searchBar: false });
-    } else if (e.target.id === 'search') {
-      setShowList({ todo: false, done: false, searchBar: true });
-    } else {
-      setShowList({ todo: true, done: true, searchBar: false });
+    switch (e.target.id) {
+      case 'todo':
+        setShowList({ todo: true, done: false, searchBar: false });
+        break;
+      case 'done':
+        setShowList({ todo: false, done: true, searchBar: false });
+        break;
+      case 'searchBar':
+        setShowList({ todo: false, done: false, searchBar: true });
+        break;
+
+      default:
+        setShowList({ todo: true, done: true, searchBar: false });
+        break;
     }
   };
 
@@ -42,22 +48,24 @@ export const ListSelector = memo(() => {
       <div className="listSelector-lists-div">
         {showList.todo && (
           <SubList
-            name={'To Do'}
+            title={'To Do'}
+            name={'todo-list'}
             setter={setCompletedTask}
             completed={false}
-            button={'done'}
+            button={'Done'}
           />
         )}
         {showList.done && (
           <SubList
-            name={'Done'}
+            title={'Done'}
+            name={'done-list'}
             setter={deleteTask}
             completed={true}
-            button={'delete'}
+            button={'Delete'}
           />
         )}
 
-        {showList.search && <SearchTask />}
+        {showList.searchBar && <SearchTask />}
       </div>
     </div>
   );

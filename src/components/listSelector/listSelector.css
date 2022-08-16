@@ -47,14 +47,29 @@
         /* SearchBar */  
         .listSelector-button-div #searchBar {
             background-color: #a19f9f;
-            border-color: #929191;
+            border-color: #848181;
         }
         
         .listSelector-button-div #searchBar:hover {
             background-color: #afaeae;
         }
   
-.listSelector-lists-div {
-display: flex;
-justify-content: center;
+ .listSelector-lists-div {
+    width: 100%;
+    margin: auto;
+ }
+
+ 
+/* Media Queries */
+@media (min-width: 500px) {
+
+    .listSelector-div {
+        width: 60%;
+        }
+
+    .listSelector-lists-div {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        }
 }

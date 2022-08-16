@@ -1,7 +1,8 @@
 import React, { memo, useState } from 'react';
-import { deleteTask, setCompletedTask } from '../store/actions';
-import { SearchTask } from './SearchTask';
-import { SubList } from './SubList';
+import { deleteTask, setCompletedTask } from '../../store/actions';
+import { SearchTask } from '../SearchTask';
+import { SubList } from '../SubList';
+import './listSelector.css';
 
 export const ListSelector = memo(() => {
   const [showList, setShowList] = useState({

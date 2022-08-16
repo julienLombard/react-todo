@@ -1,6 +1,6 @@
 import './App.css';
 import { Form } from './components/form/Form';
-import { ListSelector } from './components/ListSelector';
+import { ListSelector } from './components/listSelector/ListSelector';
 
 function App() {
   return (

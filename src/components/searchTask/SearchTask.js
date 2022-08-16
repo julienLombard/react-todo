@@ -1,5 +1,6 @@
 import React, { useContext, useState, memo } from 'react';
-import { Store } from '../store/Store';
+import { Store } from '../../store/Store';
+import './searchTask.css';
 
 export const SearchTask = memo(({ toDoList }) => {
   const { state } = useContext(Store);
@@ -18,17 +19,23 @@ export const SearchTask = memo(({ toDoList }) => {
   };
 
   return (
-    <div>
-      <h2>SearchTask</h2>
+    <div className="SearchTask-div">
+      <h2>Search a Task</h2>
       <div>
         <form action="" onSubmit={handleSearchForm}>
-          <input type="text" name="search" />
+          <input type="text" name="search" placeholder="Task name" />
           <button type="submit">Search</button>
         </form>
-        <div>
+        <div className="SearchTask-result-div">
           {search !== null ? (
             search !== undefined ? (
-              <p>{search.name + ' => ' + search.completed}</p>
+              <div>
+                <p>{'- Nom : ' + search.name}</p>
+                <p>
+                  {'- Statut : '}
+                  {search.completed === 'true' ? 'Done' : 'To Do'}
+                </p>
+              </div>
             ) : (
               // search.map((task, i) => (
               //   <p key={i}>{task.name + ' => ' + task.completed}</p>

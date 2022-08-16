@@ -1,6 +1,6 @@
 import React, { memo, useState } from 'react';
 import { deleteTask, setCompletedTask } from '../../store/actions';
-import { SearchTask } from '../SearchTask';
+import { SearchTask } from '../searchTask/SearchTask';
 import { SubList } from '../subList/SubList';
 import './listSelector.css';
 

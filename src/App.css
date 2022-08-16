@@ -13,8 +13,9 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
+.App-main {
+  /* background-color: #282c34; */
+  background: linear-gradient(#404145, #99d84e, #e1df78);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -38,11 +39,63 @@
 }
 
 
-/* List */
-
-.lists-div {
-  display: flex;
+/* ListSelector */
+.listSelector-div {
+  width: 100%;
 }
+
+.listSelector-button-div button {
+  margin: 2em .25em 0.5em;
+  padding: .5em;
+
+  border: 1px solid;
+  border-radius: 5px;
+
+  color: #fff;
+}
+
+.listSelector-button-div #all {
+  background-color: #ee7020;
+  border-color: #d05c08;;
+}
+
+.listSelector-button-div #all:hover {
+  background-color: #ec7d38;
+}
+
+.listSelector-button-div #todo {
+  background-color: #4ec41b;
+  border-color: #3f951a;
+}
+
+.listSelector-button-div #todo:hover {
+  background-color: #52cc1d;
+}
+
+.listSelector-button-div #done {
+  background-color: #de4e46;
+  border-color: #a11b14;
+}
+
+.listSelector-button-div #done:hover {
+  background-color: #e85f58;
+}
+
+.listSelector-button-div #searchBar {
+  background-color: #a19f9f;
+  border-color: #929191;
+}
+
+.listSelector-button-div #searchBar:hover {
+  background-color: #afaeae;
+}
+
+.listSelector-lists-div {
+  display: flex;
+  justify-content: center;
+}
+
+/* SubList */
 
 .list-div {
   margin: 1rem;

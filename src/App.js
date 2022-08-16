@@ -1,16 +1,14 @@
 import './App.css';
-import { Form } from './components/Form';
+import { Form } from './components/form/Form';
 import { ListSelector } from './components/ListSelector';
-import { SearchTask } from './components/SearchTask';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      <main className="App-main">
         <Form />
         <ListSelector />
-        <SearchTask />
-      </header>
+      </main>
     </div>
   );
 }

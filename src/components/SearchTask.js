@@ -1,5 +1,5 @@
 import React, { useContext, useState, memo } from 'react';
-import { Store } from '../Store';
+import { Store } from '../store/Store';
 
 export const SearchTask = memo(({ toDoList }) => {
   const { state } = useContext(Store);

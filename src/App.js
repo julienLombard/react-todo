@@ -1,6 +1,6 @@
 import './App.css';
 import { Form } from './components/Form';
-import { List } from './components/List';
+import { ListSelector } from './components/ListSelector';
 import { SearchTask } from './components/SearchTask';
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <Form />
-        <List />
+        <ListSelector />
         <SearchTask />
       </header>
     </div>

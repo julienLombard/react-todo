@@ -14,10 +14,9 @@ export const Form = memo(() => {
         name: e.target['name'].value,
         completed: false,
       });
-
-      // alert('Nouvelle tache ajoutée: ' + e.target['name'].value);
-      // } else {
-      // alert('Veuillez entrer une tâche à effectuer');
+      console.log('New Task added: ' + e.target['name'].value);
+    } else {
+      console.log('Enter a Task name');
     }
   };
 

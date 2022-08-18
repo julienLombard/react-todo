@@ -8,6 +8,7 @@ export const SubList = memo(({ title, name, setter, completed, button }) => {
 
   const handleClick = (e) => {
     setter(dispatch, parseInt(e.target.id));
+    console.log('Task ' + button);
   };
 
   return (

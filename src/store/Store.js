@@ -15,8 +15,9 @@ function reducer(state, action) {
       const index = state.todoList.findIndex(
         (task) => task.id === action.payload
       );
+      state.todoList[index].completed = true;
       return {
-        todoList: [...state.todoList, (state.todoList[index].completed = true)],
+        todoList: [...state.todoList],
       };
     case 'DELETE_TASK':
       const newList = state.todoList.filter(

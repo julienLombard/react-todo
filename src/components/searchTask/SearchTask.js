@@ -35,7 +35,7 @@ export const SearchTask = memo(() => {
                       <p>{'- Task : ' + task.name}</p>
                       <p>
                         {'- Status : '}
-                        {task.completed === 'true' ? 'Done' : 'To Do'}
+                        {task.completed === true ? 'Done' : 'To Do'}
                       </p>
                     </div>
                   );

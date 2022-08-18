@@ -6,8 +6,6 @@ export const SearchTask = memo(() => {
   const { state } = useContext(Store);
   const { todoList } = state;
   const [search, setSearch] = useState(null);
-  console.log(todoList);
-  console.log(todoList.length);
 
   const handleSearchForm = (e) => {
     e.preventDefault();
@@ -15,12 +13,6 @@ export const SearchTask = memo(() => {
     const regex = new RegExp(e.target['search'].value);
 
     setSearch(todoList.filter((task) => (regex.test(task.name) ? task : null)));
-
-    const test = todoList.filter((task) =>
-      regex.test(task.name) ? task : null
-    );
-    console.log(test);
-    console.log(test.length);
   };
 
   return (
